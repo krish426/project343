@@ -1,0 +1,26 @@
+
+<div class="container padding">
+<h2 class="kt-center padding"><strong>Tables Record</strong></h2>
+<table ng-table="tableParams" class="table table-striped table-bordered" show-filter="true">
+  <tr ng-repeat="result in $data">
+    <td title="'Table Name'" filter="{ tablename: 'text'}" sortable="'tablename'">
+      {{result.tablename}}</td>
+      <td title="'Share'" >
+        <button type="button"   ng-click="shareTable(result)"; class="btn btn-default  btn-xs"><span class="glyphicon glyphicon-share"></span></button>
+      </td>
+        <td title="'View'" >
+          <div class="btn-group">
+        <button type="button"    ng-click="selectedTable(result)" class="btn btn-default  btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button>
+    </div>
+        </td>
+          <td title="'Edit'" >
+            <div class="btn-group">
+         <button type="button"   ng-click="removeTable(result)"; class="btn btn-default  btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+     <button type="button"  ng-click="editTable(result)"  class="btn btn-default  btn-xs">  <span class="glyphicon glyphicon-pencil"></span></button>
+     </div></td>
+
+  </tr>
+</table>
+
+  <div><button class="btn padding2" ng-click="createTable()" >New Table</button></div>
+</div>

@@ -1,0 +1,41 @@
+<div class="container padding adminpfont" >
+       <div class=" ">
+           <div class=" padding shadow" ng-show="hideButton">
+               <div class="well-block">
+                   <div class="well-title kt-center">
+                       <h2 class="adminheading strong">Create Table</h2>
+                   </div>
+                  <div style="max-height:280px;overflow:auto;">
+                   <form   enctype="multipart/form-data" >
+                       <!-- Form start -->
+                       <div class=" " ng-click="hideUserErr()">
+                         <div  ng-repeat="result in arr">
+                           <div class="col-md-6" >
+                               <div class="form-group">
+                                   <input  type="text"   ng-model="$parent.model[$index]" placeholder="insert data" class="form-control input-md" minlength="1" maxlength="70"  required>
+                               </div>
+                           </div>
+                         </div>
+                           <!-- Button -->
+                           <div class="col-md-12 kt-center space2 ">
+                               <div class="form-group">
+                                   <button class="btn btn-success" ng-click="generateTable(model)" >Add Now</button>
+                                   <span style="color:green" ng-show="userAdded">Member Successfully Added.</span>
+                                   <span style="color:red" ng-show="userErr">Something Went Wrong</span>
+                               </div>
+                           </div>
+                       </div>
+                   </form>
+                   <!-- form end -->
+                </div>
+               </div>
+           </div>
+           <div class="" >
+             <div class="col-md-12 padding">
+              <div class="col-md-2"><input ng-model="$parent.tableName"  type="string" placeholder="Table Name" class="form-control input-md"></div>
+               <div class="col-md-2"><input ng-model="$parent.columnNo"  type="number" placeholder="No of Columns" class="form-control input-md"></div>
+               <div class="col-md-2"><button ng-click="createNewTable()"class="btn">Create Table</button></div>
+             </div>
+           </div>
+       </div>
+   </div>

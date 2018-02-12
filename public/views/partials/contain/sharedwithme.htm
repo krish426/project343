@@ -1,0 +1,36 @@
+
+<div class="container padding">
+<h2 class="kt-center "><strong>Shared Tables With Me</strong></h2>
+<div class="padding">Global Search
+  <input type="text" ng-model="test" size="23" placeholder="Search Now">
+</div>
+<div style="max-height:352px;overflow:auto;">
+  <table class="table table-striped table-bordered padding ">
+
+  <thead >
+
+    <tr>
+      <th>TABLE NAME</th>
+      <th>SHARED FROM</th>
+      <th>VIEW</th>
+      <th>DELETE</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr ng-repeat="result in sharedwithme | filter : test |orderBy: reverse:true">
+      <td class="capitalize">{{result.tablename}}</td>
+        <td >{{result.tableusername}}</td>
+      <td>  <div class="btn-group">
+    <button type="button"    ng-click="selectedTable(result)" class="btn btn-default  btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button>
+</div></td>
+          <td>  <div class="btn-group">
+        <button type="button"   ng-click="removeSharedWithMe(result)"; class="btn btn-default  btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+    </div></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>

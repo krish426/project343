@@ -1,0 +1,43 @@
+<div class="container padding adminpfont" >
+       <div class=" ">
+           <div class=" padding shadow">
+               <div class="well-block">
+                   <div class="well-title kt-center">
+                       <h2 class="adminheading strong">Update Table</h2>
+                   </div>
+                  <div style="max-height:280px;overflow:auto;">
+                   <form   enctype="multipart/form-data" >
+                     <div>
+                       <div class="col-md-6" >
+                           <div class="form-group">
+                               <input   type="text"  ng-model="$parent.editTableName"   placeholder="insert data" class="form-control input-md" minlength="1" maxlength="70"  required>
+                           </div>
+                       </div>
+                       <div class=" " ng-click="hideUserErr()">
+                         <div   ng-repeat="x in editTableData track by $index">
+                           <div class="col-md-6" >
+                               <div class="form-group">
+                                   <input   type="text"  ng-model="$parent.editTableData[$index]"   placeholder="insert data" class="form-control input-md" minlength="1" maxlength="70"  required>
+                               </div>
+                           </div>
+                         </div>
+
+                           <div class="col-md-12 kt-center space2 ">
+                               <div class="form-group">
+                                   <button class="btn btn-success" ng-click="tableUpdate(editTableData)" >Add Now</button>
+                                   <span style="color:green" ng-show="userAdded">Member Successfully Added.</span>
+                                   <span style="color:red" ng-show="userErr">Something Went Wrong</span>
+                               </div>
+                           </div>
+                       </div>
+                   </form>
+
+                </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <!-- <div ng-repeat="x in updateRow.rdata track by $index" >
+    {{x}}
+   </div> -->

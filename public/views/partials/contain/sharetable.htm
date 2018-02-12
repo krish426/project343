@@ -1,0 +1,27 @@
+
+<div class="container padding">
+<h2 class="kt-center "><strong>Assign Tables</strong></h2>
+<div class="padding">Global Search
+  <input type="text" ng-model="test" size="23" placeholder="Search Now">
+</div>
+<div style="max-height:352px;overflow:auto;">
+  <table class="table padding table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>USER NAME</th>
+      <th>ASSIGN TABLE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="result in allusers | filter : test |orderBy: reverse:true">
+
+      <th>{{result.username}}</th>
+      <td>  <div class="btn-group">
+    <button type="button"  ng-click="shareTheTable(result)" class="btn btn-default  btn-xs">  <span class="glyphicon glyphicon-check"></span></button>
+  </div></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>

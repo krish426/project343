@@ -1,0 +1,30 @@
+<div class="container padding">
+<h2 class="kt-center "><strong>Table Record</strong></h2>
+<div class="padding ">Global Search
+  <input type="text" ng-model="test" size="23" placeholder="Search Now">
+</div>
+  <h4 class="kt-center strong">{{tableSName| uppercase}}</h4>
+<div style="max-height:352px;overflow:auto;">
+  <table class="table table-striped table-bordered padding ">
+
+  <thead >
+    <tr>
+      <th  ng-repeat="x in tRecord track by $index">{{x|uppercase}}</th>
+      <th>EDIT</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr ng-repeat="x in allRows | filter : test |orderBy: reverse:true" >
+
+      <td ng-repeat="y in x.rdata track by $index">{{y}}</td>
+      <td>  <div class="btn-group">
+        <button type="button"   ng-click="removeRow(x)"; class="btn btn-default  btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+    <button type="button"  ng-click="selectedRow(x)" class="btn btn-default  btn-xs">  <span class="glyphicon glyphicon-pencil"></span></button>
+  </div></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+  <div><button class="btn padding2" ng-click="addRow(tRecord)" >Add Row</button></div>
+</div>

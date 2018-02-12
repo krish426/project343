@@ -1,0 +1,53 @@
+<div class="container padding adminpfont" >
+       <div class=" ">
+           <div class=" padding shadow">
+               <div class="well-block">
+                   <div class="well-title kt-center">
+                       <h2 class="adminheading strong">Update Profile</h2>
+                   </div>
+
+                   <form   enctype="multipart/form-data" >
+                       <!-- Form start -->
+                       <div class="row " ng-click="hideUserErr()">
+                         <div class="col-md-6" >
+                             <div class="form-group">
+                                 <label class="control-label ">User Name</label>
+                                 <input  type="text"   ng-model="$parent.userName" placeholder="Username" class="form-control input-md" minlength="1" maxlength="70"  required>
+                             </div>
+                         </div>
+                           <div class="col-md-6" >
+                               <div class="form-group">
+                                   <label class="control-label ">User Email</label>
+                                   <input  type="email"   ng-model="$parent.userEmail" placeholder="Email" class="form-control input-md"  maxlength="48"  >
+                               </div>
+                           </div>
+                           <div class="col-md-6" >
+                               <div class="form-group">
+                                   <label class="control-label ">Phon Number</label>
+                                   <input  type="text" maxlength="13"   ng-model="$parent.phonNumber" placeholder="Phon Number"  class="form-control input-md" >
+                               </div>
+                           </div>
+                           <div class="col-md-6" >
+                               <div class="form-group">
+                                   <label class="control-label ">Change Password</label>
+                                   <input  type="text" maxlength="78"  ng-model="$parent.userNewPassword" placeholder="********"  class="form-control input-md" >
+                               </div>
+                           </div>
+
+                           <!-- Button -->
+                           <div class="col-md-12 kt-center space2 ">
+                               <div class="form-group">
+                                   <button class="btn btn-success" ng-click="updateUser()" >Update Now</button>
+                                   <span style="color:green" ng-show="userUpdated">User Successfully Updated.</span>
+                                   <span style="color:red" ng-show="userErr">Something Went Wrong</span>
+                               </div>
+                           </div>
+                       </div>
+                   </form>
+                   <!-- form end -->
+
+               </div>
+           </div>
+
+       </div>
+   </div>

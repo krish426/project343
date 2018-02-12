@@ -1,0 +1,28 @@
+
+        <nav class="navbar navbar-default  navbar-fixed-top">
+          <div class="container">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">User Panel</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li ng-class="userpanel"><a class="cool-link" href="/userpanel">Home</a></li>
+              </ul>
+              <ul class="nav navbar-nav">
+                <li ng-class="astables"><a class="cool-link" href="/assignedtables">Assigned Tables</a></li>
+                <li  ng-class="sharedwme"><a class="cool-link" href="/sharedwithme">Shared Tables with me</a></li>
+                <li ng-class="editpro"><a class="cool-link" href="/editprofileuser">Edit Profile</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+              <li  ng-click="logout()"><a class="cool-link" href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+              </ul>
+            </div>
+           </div>
+         </div>
+        </nav>

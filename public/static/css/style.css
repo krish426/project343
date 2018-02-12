@@ -1,0 +1,111 @@
+body{background-color:#fff;
+	 font-family: Verdana,sans-serif,arial;
+	 letter-spacing: 2px;
+	  padding-top: 50px;
+		 }
+
+.login-top-margin{
+  margin-top:80px
+}
+
+/*!!!!!!!!!!!!!!!spinner!!!!!!!!!!!!!!*/
+
+.loader {
+  border: 8px solid #C0C0C0;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 0.5s linear infinite;
+  animation: spin 0.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!spinner end !!!!!!!!!!!!!!!!!!*/
+.kt-center {
+    display: block;
+    margin: auto;
+		text-align: center;
+}
+
+.padding{
+	padding:1%;
+}
+.padding2{
+	margin-top:10px;
+}
+.strong{
+	font-weight: bold;
+}
+input[type=text], select {
+
+
+padding: 5px 5px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.border {
+    border: 2px solid grey;
+    border-radius: 5px;
+		padding:100px;
+}
+.shadow{
+	  filter: gray; /* IE6-9 */
+	  -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+	    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+	    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+	    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+	    margin-bottom:20px;
+			 margin-left:3px;
+}
+
+
+
+.colspan {
+    -webkit-column-span: all; /* Chrome, Safari, Opera */
+    column-span: all;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!cool link !!!!!!!!!!!!!!!! */
+
+.cool-link {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: black;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+.capitalize {
+   text-transform: capitalize;
+}
+@media (max-width:600px){
+h2 strong{
+  font-size:20px;
+}
+th, td{
+	font-size:12px;
+}
+}
